@@ -32,10 +32,8 @@ export {
   nothing,
   // PropertyPart,
   render,
-  svg, // SVGTemplateResult,
-} from // TemplateResult,
-// reparentNodes,
-// removeNodes,
+  svg, // SVGTemplateResult, // TemplateResult, // reparentNodes,
+} from // removeNodes,
 'lit';
 
 export { isDirectiveResult } from 'lit/directive-helpers.js';
@@ -50,6 +48,8 @@ export { repeat } from 'lit/directives/repeat.js';
 export { styleMap } from 'lit/directives/style-map.js';
 export { unsafeHTML } from 'lit/directives/unsafe-html.js';
 export { until } from 'lit/directives/until.js';
+export { isTemplateResult } from 'lit/directive-helpers.js';
+
 // export { render as renderShady } from 'lit-html/lib/shady-render.js';
 // open-wc
 export { ScopedElementsMixin } from '@open-wc/scoped-elements';

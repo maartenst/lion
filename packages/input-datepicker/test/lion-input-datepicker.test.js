@@ -316,7 +316,7 @@ describe('<lion-input-datepicker>', () => {
         <lion-input-datepicker calendar-heading="foo"></lion-input-datepicker>
       `);
       const calendarEl = /** @type {LionCalendar} */ (el.shadowRoot?.querySelector(
-        '[data-tag-name="lion-calendar"]',
+        'lion-calendar',
       ));
       const { dateSelectedByUser } = getProtectedMembersCalendar(calendarEl);
       // First set a fixed date as if selected by a user
@@ -343,7 +343,7 @@ describe('<lion-input-datepicker>', () => {
         <lion-input-datepicker calendar-heading="foo"></lion-input-datepicker>
       `);
       const calendarEl = /** @type {LionCalendar} */ (el.shadowRoot?.querySelector(
-        '[data-tag-name="lion-calendar"]',
+        'lion-calendar',
       ));
       const { dateSelectedByUser } = getProtectedMembersCalendar(calendarEl);
 

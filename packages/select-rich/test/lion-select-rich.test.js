@@ -665,14 +665,14 @@ describe('lion-select-rich', () => {
           }
         },
       );
-      const invokerTag = unsafeStatic(invokerTagName);
+      // const invokerTag = unsafeStatic(invokerTagName);
 
       const selectTagName = defineCE(
         class extends LionSelectRich {
           get slots() {
             return {
               ...super.slots,
-              invoker: () => document.createElement(invokerTag.d),
+              invoker: () => document.createElement(invokerTagName),
             };
           }
         },

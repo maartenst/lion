@@ -1,5 +1,5 @@
 import { LionCalendar } from '@lion/calendar';
-import { html, ifDefined, ScopedElementsMixin } from '@lion/core';
+import { html, ifDefined, ScopedElementsMixin, render } from '@lion/core';
 import { LionInputDate } from '@lion/input-date';
 import {
   OverlayMixin,
@@ -62,14 +62,10 @@ export class LionInputDatepicker extends ScopedElementsMixin(
       ...super.slots,
       [this._calendarInvokerSlot]: () => {
         const renderParent = document.createElement('div');
-        /** @type {typeof LionInputDatepicker} */ (this.constructor).render(
-          this._invokerTemplate(),
-          renderParent,
-          {
-            scopeName: this.localName,
-            eventContext: this,
-          },
-        );
+        render(this._invokerTemplate(), renderParent, {
+          scopeName: this.localName,
+          eventContext: this,
+        });
         return /** @type {HTMLElement} */ (renderParent.firstElementChild);
       },
     };
@@ -277,11 +273,8 @@ export class LionInputDatepicker extends ScopedElementsMixin(
     return html`
       <lion-calendar
         slot="content"
-        .selectedDate="${
-          /** @type {typeof LionInputDatepicker} */ (this.constructor).__getSyncDownValue(
-            this.modelValue,
-          )
-        }"
+        .selectedDate="${/** @type {typeof LionInputDatepicker} */ (this
+          .constructor).__getSyncDownValue(this.modelValue)}"
         .minDate="${this.__calendarMinDate}"
         .maxDate="${this.__calendarMaxDate}"
         .disableDates="${ifDefined(this.__calendarDisableDates)}"
