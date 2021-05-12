@@ -1,6 +1,7 @@
 import { Required } from '@lion/form-core';
 import { LionInput } from '@lion/input';
 import { expect, fixture, html, unsafeStatic } from '@open-wc/testing';
+
 import { getFormControlMembers } from '@lion/form-core/test-helpers';
 import sinon from 'sinon';
 import { ChoiceInputMixin } from '../../src/choice-group/ChoiceInputMixin.js';
@@ -15,6 +16,7 @@ customElements.define('choice-group-input', ChoiceInput);
 
 /**
  * @param {{ tagString?:string, tagType?: string}} [config]
+ * @deprecated
  */
 export function runChoiceInputMixinSuite({ tagString } = {}) {
   const cfg = {
