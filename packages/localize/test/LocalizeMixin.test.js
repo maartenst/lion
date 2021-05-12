@@ -1,14 +1,6 @@
 import { isDirectiveResult, LitElement } from '@lion/core';
-import {
-  aTimeout,
-  defineCE,
-  expect,
-  fixture,
-  fixtureSync,
-  html,
-  nextFrame,
-  unsafeStatic,
-} from '@open-wc/testing';
+import { aTimeout, defineCE, expect, fixture, fixtureSync, nextFrame } from '@open-wc/testing';
+import { html, unsafeStatic } from 'lit/static-html';
 import sinon from 'sinon';
 import { localize } from '../src/localize.js';
 import { LocalizeMixin } from '../src/LocalizeMixin.js';
