@@ -1,4 +1,4 @@
-import { directive } from '@lion/core';
+import { Directive } from 'lit/directive.js';
 
 /**
  * In order to speed up the first meaningful paint, use this directive

@@ -1,6 +1,7 @@
 import { LitElement } from '@lion/core';
 import { localizeTearDown } from '@lion/localize/test-helpers';
-import { defineCE, expect, html, unsafeStatic, fixture } from '@open-wc/testing';
+import { html, unsafeStatic } from 'lit/static-html.js';
+import { aTimeout, defineCE, expect, fixture } from '@open-wc/testing';
 import { getFormControlMembers } from '@lion/form-core/test-helpers';
 import { LionInput } from '@lion/input';
 import '@lion/form-core/define';
@@ -14,6 +15,8 @@ import { FormGroupMixin } from '../../src/form-group/FormGroupMixin.js';
  * @param {{ tagString?: string, childTagString?:string }} [cfg]
  */
 export function runFormGroupMixinInputSuite(cfg = {}) {
+  console.log('runFormGroupMixinInputSuite');
+
   const FormChild = class extends LionInput {
     get slots() {
       return {
@@ -62,6 +65,7 @@ export function runFormGroupMixinInputSuite(cfg = {}) {
     });
 
     it('suffixes child labels with group label, just like in <fieldset>', async () => {
+      console.log('bla');
       const el = /**  @type {FormGroup} */ (await fixture(html`
         <${tag} label="set">
           <${childTag} name="A" label="fieldA"></${childTag}>
@@ -88,8 +92,12 @@ export function runFormGroupMixinInputSuite(cfg = {}) {
 
       // Test the cleanup on disconnected
       el.removeChild(field1);
+      console.log('blabla', field1);
+
       await field1.updateComplete;
+      // await aTimeout(100);
       expect(getLabels(field1)).to.eql([field1._labelNode.id]);
+      console.log('blablabla');
     });
   });
 

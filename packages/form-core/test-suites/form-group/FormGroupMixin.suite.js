@@ -1,14 +1,7 @@
 import { LitElement, ifDefined } from '@lion/core';
+import { html, unsafeStatic } from 'lit/static-html.js';
 import { localizeTearDown } from '@lion/localize/test-helpers';
-import {
-  defineCE,
-  expect,
-  html,
-  triggerFocusFor,
-  unsafeStatic,
-  fixture,
-  aTimeout,
-} from '@open-wc/testing';
+import { defineCE, expect, triggerFocusFor, fixture, aTimeout } from '@open-wc/testing';
 import sinon from 'sinon';
 import { IsNumber, Validator, LionField } from '@lion/form-core';
 import '@lion/form-core/define';

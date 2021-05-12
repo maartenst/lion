@@ -32,9 +32,10 @@ export {
   nothing,
   // PropertyPart,
   render,
-  svg, // SVGTemplateResult, // TemplateResult, // reparentNodes,
-} from // removeNodes,
-'lit';
+  svg, // SVGTemplateResult, // TemplateResult, // reparentNodes, // removeNodes,
+} from 'lit';
+
+export { directive, AsyncDirective } from 'lit/async-directive.js';
 
 export { isDirectiveResult } from 'lit/directive-helpers.js';
 

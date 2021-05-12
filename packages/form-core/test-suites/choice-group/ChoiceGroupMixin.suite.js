@@ -2,7 +2,9 @@ import { LitElement } from '@lion/core';
 import { LionInput } from '@lion/input';
 import '@lion/fieldset/define';
 import { FormGroupMixin, Required } from '@lion/form-core';
-import { expect, html, fixture, fixtureSync, unsafeStatic } from '@open-wc/testing';
+import { expect, fixture, fixtureSync } from '@open-wc/testing';
+import { html, unsafeStatic } from 'lit/static-html.js';
+
 import sinon from 'sinon';
 import { ChoiceGroupMixin } from '../../src/choice-group/ChoiceGroupMixin.js';
 import { ChoiceInputMixin } from '../../src/choice-group/ChoiceInputMixin.js';
