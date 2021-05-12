@@ -1,4 +1,5 @@
-import { expect, fixture, html, oneEvent } from '@open-wc/testing';
+import { expect, fixture, oneEvent } from '@open-wc/testing';
+import { html } from 'lit/static-html';
 
 import '@lion/steps/define-step';
 
